@@ -1,0 +1,179 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CModeleBase
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1464e9e2004e7907
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CModeleBase est une Classe
+      	
+      	m_bNouveau		est un booleen		// Nouvel enregistrement ?
+      	m_vID			est un variant		// Identifiant unique de l'enregistrement
+      	
+      	m_sNomFichier		est une chaîne		// Nom logique du fichier
+      	m_sNomCléUnique	est une chaine		// Nom de la clé unique	
+      	
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1469556535306713367
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur(sNomFichier est une chaine,sNomIDAuto est une chaine)
+      
+      // Par défaut, il s'agit d'un nouvel enregistrement
+      m_bNouveau=Vrai
+      
+      // On mémorise le fichier et la clé
+      m_sNomFichier		= sNomFichier
+      m_sNomCléUnique	= sNomIDAuto
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1469556535306778903
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : Charger
+     procedure_id : 1469556535306844439
+     type_code : 12
+     code : |1+
+      PROCEDURE Charger()
+      
+      // Mémorisation de l'identifiant de l'enregistrement courant
+      _MémoriseIdentifiant()
+      
+      // Mise en mémoire de l'enregistrement
+      FichierVersMémoire()
+     type : 458752
+   -
+     name : bEnregistrer
+     procedure_id : 1469556535306909975
+     type_code : 12
+     code : |1-
+      PROCEDURE bEnregistrer(clErreur est un CGestionErreur)
+      
+      // Est-ce un nouvel enregistrement ?
+      SI bNouveau() ALORS
+      	// Nouvel enregistrement
+      	HRAZ(m_sNomFichier)
+      	MémoireVersFichier()
+      	HAjoute(m_sNomFichier)
+      	SI ErreurDétectée() ALORS clErreur.Init(CGestionErreur::ErreurHFSQL,HErreurInfo())
+      	
+      	// Mémorisation de l'identifiant de l'enregistrement courant
+      	_MémoriseIdentifiant()
+      SINON
+      	// On se positionne sur l'enregistrement en base
+      	HLitRecherchePremier(m_sNomFichier,m_sNomCléUnique,m_vID)
+      	SI HTrouve() ALORS
+      		MémoireVersFichier()
+      		HModifie(m_sNomFichier)
+      		si ErreurDétectée() alors clErreur.Init(CGestionErreur::ErreurHFSQL,HErreurInfo())
+      	SINON
+      		// Enregistrement non trouvé
+      		clErreur.Init(CGestionErreur::NonTrouvé)
+      	FIN
+      FIN
+      
+      // L'interface graphique devra être mise à jour
+      DemandeMiseAJourUI()
+      
+      // On renvoie Vrai si aucune erreur
+      renvoyer clErreur.p_eCode=CGestionErreur.Aucune
+     type : 458752
+   -
+     name : bSupprimer
+     procedure_id : 1469556535306975511
+     type_code : 12
+     code : |1-
+      PROCEDURE bSupprimer(clErreur est un CGestionErreur)
+      
+      SI bNouveau() ALORS renvoyer vrai
+      
+      HLitRecherchePremier(m_sNomFichier,m_sNomCléUnique,m_vID)
+      SI HTrouve() ALORS
+      	HSupprime(m_sNomFichier)
+      	SI ErreurDétectée() ALORS clErreur.Init(CGestionErreur::ErreurHFSQL,HErreurInfo())
+      SINON
+      	clErreur.Init(CGestionErreur::NonTrouvé)
+      FIN
+      
+      RENVOYER clErreur.p_eCode=CGestionErreur.Aucune
+     type : 458752
+   -
+     name : bNouveau
+     procedure_id : 1469556535307041047
+     type_code : 12
+     code : |1+
+      PROCEDURE bNouveau()
+      
+      RENVOYER m_bNouveau
+     type : 458752
+   -
+     name : Copier
+     procedure_id : 1469556535307106583
+     type_code : 12
+     code : |1-
+      PROCEDURE Copier(pclBase est un CModeleBase dynamique)
+      
+      objet<=pclBase
+     type : 458752
+   -
+     name : FichierVersMémoire
+     internal_properties : CAAAAAgAAAAAviU8ifR9dCucV0WoFRMnAP9WbXw/WtjWCn4BDuosSBhO66vONITH+aE3wk4oqpjgJ9evM8f2Dc7iqhJGBz6v752TlKoq9x6SgssnrsFH2AaccJ1BaDhN5jptLnCHyWq35xDecbPZG1xntJRNV1DwU1P7EqD3kCcuq4qEQe6kcSai0m7DrgrndjNd7lKNE824UwZaG9Du3/9hHv6sgWppqultWvF4QWYnzK0Cq0RiwtGRSvefFHiGQK0w1Fwx4tP0efgXRqs7jPXl6MQzvRijSInB0nEG6ZldaZIvvT2szo8KDef14g==
+     procedure_id : 1469556535307172119
+     type_code : 12
+     code : |1-
+      PROCEDURE FichierVersMémoire()
+      
+      WL.FichierVersMémoire(objet,m_sNomFichier)
+     type : 458752
+   -
+     name : MémoireVersFichier
+     internal_properties : CAAAAAgAAACqUP8qA2bvjpUe0T/GX2mZejH4KwbhbMroHGjDzKzqitoIrfEoDo7Z+6MxNEz6WCpCjj8eLXqWg2RuNmK4gUL7zIBP3GgW1XziAimJTCFJIjpgEB376LrPboLzROoLs8wPD4g+W/uD0ZAr0uqXi15+q3tr3y000WYTwB/fHgOjcrfDiS/MZ496z8QeBVeSHtq9aBm3pEljUhS++92ZzvkygzIow+e1oknQk7gPJPn7dc0V3extZrbEgp8i2loz4M3OU8LdjG35yjenKroptyatcrP7KC9AL18X0wy1O78iQAGE941TTA==
+     procedure_id : 1469556535307237655
+     type_code : 12
+     code : |1-
+      PROCEDURE MémoireVersFichier()
+      
+      WL.MémoireVersFichier(objet,m_sNomFichier)
+     type : 458752
+   -
+     name : _MémoriseIdentifiant
+     procedure_id : 1469557540329688270
+     type_code : 12
+     code : |1-
+      PROCEDURE virtuelle _MémoriseIdentifiant()
+      
+      // On a un enregistrement courant, donc il ne s'agit plus d'un nouvel enregistrement
+      m_bNouveau=Faux
+      
+      // Mémorisation de l'identifiant
+      m_vID={m_sNomFichier+"."+m_sNomCléUnique,indRubrique}
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1fd0a03000160a36
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

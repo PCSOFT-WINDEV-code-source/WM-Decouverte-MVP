@@ -1,0 +1,319 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Contact
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Contact
+ identifier : 0x2fd333ca2b802515
+ internal_properties : CAAAAAgAAABi2HYywB21MY9q1KFMkc63gc9yuwtGLJjdLflbrrg687fwvPWEa0qQH17O+oSp7rsaD40FDvaTO/JEEuL0yBdFvJcfePlC0jbUX8uNix3dfdSms+k+YdicU9c8D4lKx1GY9hIPzUWkaVxuFtQeNm1tLu4iqEmobuCiq4eFg69MvcRIPtnT9jlVHSDufaAOgFCmxYSwb5bfR4c2SmIVJBoUbN34APLt31fcMMY+FII9JFBmo3ujJTDjMJvFspKeQQWvcORQqKTKxUNuBugkb3wWBORu4dm+aPkQrDwocPT1ziY6dNzalYvcjLp5NXyqJfeyNRnIqqQAqxLuZaDwmY4QMD65zWLe0hLZyAE7IiSXU/Y7fLsvKORu7ofDHLEVSD2/z0TaDykjpAQ7BRErsSpClI6l3uHJGzXuAQqDS6U6YKRUr3xAbW/mBNBdD5jSScCidhFK/VvtI1hn60Y0puuYCCrKNjnTIpo29HjSGkthlOxJMafVkDCUC/fK9dI5vd5w4bUE2Z6Ibg8m0nkJEtNGbxO1CPVOTuFYPPJaCMvGN7EfAfzT9gpid2nG8MGiJNvhsy8v6moARE9T+PcnmBfwQHEa4AfgQoAkpFRAl7p9anyJRp9EBR+UC8kvOE94NQ5R+4D8J/Ch+4p+JL20yZHD8WHtb7YF4jisS04m3IAoXRCza5ls+lcpvHwJmZcCgNPCx2f4hr5syPbPo6lM0076ofvVxURA5ikVZlmYYk/weTLv+dhW59YcMVkB1U4ZfLX/pCdc5zeJByYatTuYmLgHrve8nBHrkH3K1gGb3bF7IED3Rn8o9H78PWHuIRiMMT6Duyi+NxrCM0r8kjkBjdZYfwG4s/A8dd6YF1Fq6bZcQUw/KXgDAeudf8jJXqma3k5AbeE=
+ properties :
+  width : 320
+  height : 504
+  heightMin : 585
+ controls :
+  -
+    name : ZR_Contact
+    identifier : 0x2fd3356900a17887
+    internal_properties : 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
+    properties :
+     width : 320
+     height : 504
+    controls :
+     -
+       name : IMG_Profil
+       identifier : 0x2fd337ca01ffc302
+       internal_properties : CAAAAAgAAABNNrDG0J6A9x6p6pHIVDd9WymgQpfuQ95gZ39sFU93NtHTmRUnrdPuEDWm3TLxkseE8wnAp19Y9UklIkS/j+LAH4zhsQ5mOH4HHuk3foj2+yCTfwmqSP6lTp3QdvQ6M0Lmi0WDypHLLvECIUGbgrAps4lAgT90dW3ihBVjoROZhL1MMdo2OsfYh4rem0MRld1TxYWZUguePzKjzX70iRr6Mg+QSY7VpwNniYOrKDVEnUxxjgXxvt4skLQ2XA9dkZJbIb2Rd2+JhHPZQrypOv4A7F5+fBwrFl/WnaUWI5OskGi5dJsAwq21qPhBgWTaS/EbZXLx0gJf50406tP/WmVyygNHtssYfKRk4uc8KlZiu8RM/OSg1lypFO8h8oCW5/K4inMhA+XoLPRXAFW9m3vjuP4oan1LfkBRTmfxdZM/Q6WS2mKg/mrZjWjACJzR0GazaCu9q2XzDOXZCu9lz4n6wxsNgRHjFHtgew8NOR80RC98vqTdkGv3MhXd4ZuTpPsqOY9TMuSXhjnRXXuYDYkn1pI5rY3/7i89h8ZLrmdHpvMKE5ew9wSBuFUmcEkDnP80Kmbynxp4qEP7Cc2tK8qI7y3lRo2MSgpx9QNLARRfQUISf6EZHUZIfaC39/6YM8mi5QoezYljzwB+wTJOdvcBzFS6sgVR3AcSz/H0ZqAt+3OSKCxJFzDoo0BDvLLtGfBIzBT/Eghc1C9E5PssRH2gYCcjv+c/7lyfFBBA+GbRE9nZg9FqhRv04sfMFigxlFOvgYQSWjWREAd5KXT5BqGEiJQ/6nPioFHHolhBFvOomI633VUPU1fkiH78vd4eIpQ3OLjMDJluAxRLnvHKzVCzOxDv0rt+g6sNSsKqNiiqVplnO04Kswmji8LSdwkdWURuj384zgGhxKef
+       properties :
+        x : 22
+        y : 18
+        width : 42
+        height : 42
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes : []
+     -
+       name : LIB_Utilisateur
+       identifier : 0x2fd337d00204db5c
+       internal_properties : CAAAAAgAAAA96ocVozueS6pCyZAUNANvxChhWDbYlwC6G80jGBySNeR2pSUddEo9sf5NFzOdgf+8o+DTTr2FKkoM2pcQmHzWmcDrh+eXHdkqkZ/liNlOZd5ybEnLUGmPrL1+HS+x2Wo5PY2/V76wu0b1D3Kvhadbk0d57Q3WS/fdpPYIWQEQd/7Y5kVkyfUrYDIMAGgGySHXJn4XDXZU+BEQAc/xhISaKLGX3q0KnExkefzALBZ3wJPv4oe0nQos4cAZNSYM1xc3ns5nfRfM2kyfw7ar5d04lt5Xo2bfwboE3v5rO6nr2l4nZaIBx7K16gwWgi8jSkBt0OIv0imhCmymDftuPOuBToiW0F4j6xkGBJy5ESY1/vXcsK9IwX/4cpNobrdGMi5ofdmRFxIBXbPhVbd7yM4IckfAY5ELiICaYnIx5ShAgvpgHH2q2uYZQqLJ2Nh8zFRLz2bQCroefmBI+wkF9QN+SMaEmP1H/B23oDLbVjLIDjnnHbCMUnJK/t1xZ7VdzTl7IFDCSNgz7FwiMFgl+xqrECQ=
+       properties :
+        x : 75
+        y : 18
+        width : 224
+        height : 19
+       type : 3
+       code_elements :
+        type_code : 2
+        p_codes : []
+     -
+       name : LIB_Email
+       identifier : 0x2fd337d20208e2af
+       internal_properties : CAAAAAgAAABtQcGQB9DhhDjtD0K3XhdgjIXc3J1cP0GLzc9rQdQwrdTAyQEknzdk3VIppukWiua14NyKwZFA01nXRZv3mnLdSTqxqjRysbrfsxed2RltVgT/hnAfUcnfkGgJKgvSHUJGatyv3RcB83Law8zR/v8PZt6WDyxKUkfPVxqa9aQ7VsacPXpaPXFpPlmzGH9J9rwMMF32JmTEP5OT138omvLfrQRGamDNBEl/y+qwoc/MSxo+dFAnvrXIN8qhBqP/We3tWAazVmCbsWOhHHpREVNsvrrTEnBfB3XsmpssQxwkRdXUV1fIYLdHISN5CugA+Q+q8Xajqr7x2jAo0eeJbqRiD2SEQGEQUKC+T+M1aEuCR79mm6meDCmcpkYMHCtazL+1wRoAoEHoWm5AbzytZN8BHBmow62LXGkZOjEi4mjvsyVgtxhVdwNbjbOucuhX7uTL0zcNVOH7o11Y0t3kh4A1xAc0uTPZBRJKNUyrnA8L1X7uxY0eV0wtuBZemGsKRpx8GM4vFQUx17w/sBESUazc6QFpVnv7+qIuLLc0LyuNYOE=
+       properties :
+        x : 75
+        y : 42
+        width : 224
+        height : 19
+       type : 3
+       code_elements :
+        type_code : 2
+        p_codes : []
+     -
+       name : IMG_Separateur
+       identifier : 0x2fd386f2092cf8e8
+       internal_properties : CAAAAAgAAACBN4CszeS1mICT2IHYOWY19LTg3Fb0wAF8Vc03z0yC4V/jKhsjQt6ScSLVOoILFMuTyGBQnMvn3YKoizMx2ShmNb/v6qqhWhggviZinhi1nfC2oQj2YC8XMUFGru7RsdGJi1c1eP0IXeoH+TFkrKr7mwhiYDuHOBOSMyN6U9oAfmf0gEhUy5fBctOVGriTe/ixaxk1dY0wAupbAG+eHPvzsfcgLvd/1mPnxv6Y2wKDatnXS4QOdaZ6jGeRllM4Sx6wygcomCxSihysXxIRzWtCBW7aa2jrqEVNJS/uQE/I7UH9Pju1+5sni8rwB5EOZwvzzJa7Q1x6UEr3E8E/MV4QPC/G/Avul9ugSjGMOYYtfH1fJb+5vM5ldVYlsQpO/NXxEv9yzyLbz0l6Mj+TsYSidRkUs44tyvteo23z6jvc1thhm96Wwbrc3PmaJhMpwX4sS7wIpPqv0/NeYoHT3sINOVuMwHX9dciuDeqxPO8JaZQmTbY+a8HTgruQV3kIiYiHxkA0cEnereJF2ygA4W+CjyW60ZlIaP+G599olVSqHWOGwgTok5jGSFyeSJSrAjLO+2yO1OxAwIg0vAbhAHPAYt3tCwstvuzOBWht5P/lxWlL+IsIjHnEQwVRa0sDqxzvfB/54jUoXom/CQPxfHqDlrWTzWx0QXZMIzQFftm9DwVlvhwtufab/7ziR17g4RYvSw5kDJcLeIFMdzK2oqHQFIlnFucR8yAuocpyNn9fdiw9XiGk82v6eHC1qFWgWLkEA/cxxH8d2WyG3KiZZjfv7sumBnKMHpRQLcHKELM=
+       properties :
+        x : 22
+        y : 69
+        width : 277
+        height : 9
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes : []
+    columns :
+     -
+       name : ATT_ID
+       identifier : 0x2fd348e7058f9c2b
+       internal_properties : CAAAAAgAAAARy+lp+D3CKc2hfEejBdYldRv2kHXFVJdrKjg5WZIJ+JfXvx8sd0jBmVVXDrEJz0wXeKqjp6dky+ACBBnYRhOc+vgnAor3zfzs8ZUEkm2IuGpMYiR2M+1KWRPz3p/pXGcjkCHaaAETXZu2HrRJTRCHdd6TKuCIPdCVT9D7E4u/CVGUUOHhhLWlBjmQs9HTjv1XhsjRqi6hw8bRE1uGkl2xkd5S
+       type : 3
+       content :
+        identifier : 0x2543d9880269fae5
+        internal_properties : CAAAAAgAAAA+ydwH69gPtZH9qoG8K7G6DH/mRhLAsIA4PXnwyQx9MV8BNs7UzvWB7NTCuEJWvBmA5CdsnUFWw3dCUBfdsaykjF1uve6LPYfwNBNWYEJulQmozEPUgRf5BggPT0njovHi1TUZ3dMWVWJDzVO7BYEECF/l1PEjm665bwXVv4LK4oa6xdFXhLX48q7GZuO+5fIY2l9pbbTIT9LWlT6k
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+     -
+       name : ATT_Utilisateur
+       identifier : 0x2fd348e705919c4a
+       internal_properties : CAAAAAgAAABkm7XAp0UxLSwEIPKDiTNxYPqLvvuq//AmqwZ1FJ5l0s/E+njK7Tan6kTukc9oDuInATs0lrO9vwx7zjARvu5sndYhGd6ezZtPK/ke2w3t/gQxTYXc3XG8d1Exg8cQsVu2kkSHmFnusjXDghpVnAR/HZgOcxearO1xM6mXiBSW86lRoADg7jvJp4JK+aNILZLW19bHepbhI6L7rpuaIBayChBUblaJ66I9b+GQXeWC1eUEbEa5Ubscyg==
+       type : 3
+       content :
+        identifier : 0x2543d988026bfae5
+        internal_properties : CAAAAAgAAAA+ydwH69gPtZH9qoG8K7G6DH/mRhLAsIA4PXnwyQx9MV8BNs7UzvWB7NTCuEJWvBmA5CdsnUFWw3dCUBfdsaykjF1uve6LPYfwNBNWYEJulQmozEPUgRf5BggPT0njovHi1TUZ3dMWVWJDzVO7BYEECF/l1PEjm665bwXVv4LK4oa6xdFXhLX48q7GZuO+5fIY2l9pbbTIT9LWlT6k
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+     -
+       name : ATT_Email
+       identifier : 0x2fd348e705939c4a
+       internal_properties : CAAAAAgAAADkPRBr9v3ThkZM7aDaD+0McCx1oaDItUsKL7UQeO2b/TkZpGqRfMV42zUoSbvE6yTWFOJTP6yiRCmboNJCphgoPngvttGlhLmv8FL55ZMG6UMZr+BsitH7GO5IK85Mh6QDZ/WEqds6/x4UfwZlaeclRXYArb2hAytDbT9pvgu/s+nv4oxoU2g32UgsC7nPpno0aZwz6otCr2ZYtEEiNLbkhFxChG7qjC5BsCzJy8qntVQ=
+       type : 3
+       content :
+        identifier : 0x2543d988026dfae5
+        internal_properties : CAAAAAgAAAA+ydwH69gPtZH9qoG8K7G6DH/mRhLAsIA4PXnwyQx9MV8BNs7UzvWB7NTCuEJWvBmA5CdsnUFWw3dCUBfdsaykjF1uve6LPYfwNBNWYEJulQmozEPUgRf5BggPT0njovHi1TUZ3dMWVWJDzVO7BYEECF/l1PEjm665bwXVv4LK4oa6xdFXhLX48q7GZuO+5fIY2l9pbbTIT9LWlT6k
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+     -
+       name : ATT_Photo
+       identifier : 0x2fd348e705959c5a
+       internal_properties : CAAAAAgAAACNmlKoeIpspl62MHvGX5UH0/qodw6r95IgetvgeJBGEn7S2n1Q/uGljnhjO/nQjksMK8gv4d7N+Ttz3cnHRhGsK2AIRacQ77hBgpZ/hoQjwWXi0Abt5gm2FiqW/UFSsAmwTXUAeiqoorR5qzY8YeD2Ploy0UI0faq93j8Pl0lGZuDV7oDpktKYleMuJQa5YRkRScppRSBWcyY7RjddEGvpCTINZxttwo3DTfmRNEXXoBe3YFc=
+       type : 3
+       content :
+        identifier : 0x2543d988026ffae5
+        internal_properties : CAAAAAgAAAA+ydwH69gPtZH9qoG8K7G6DH/mRhLAsIA4PXnwyQx9MV8BNs7UzvWB7NTCuEJWvBmA5CdsnUFWw3dCUBfdsaykjF1uve6LPYfwNBNWYEJulQmozEPUgRf5BggPT0njovHi1TUZ3dMWVWJDzVO7BYEECF/l1PEjm665bwXVv4LK4oa6xdFXhLX48q7GZuO+5fIY2l9pbbTIT9LWlT6k
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+    type : 30
+    code_elements :
+     type_code : 42
+     p_codes :
+      -
+        code : |1-
+         
+        type : 21
+      -
+        type : 22
+        enabled : false
+      -
+        type : 24
+        enabled : false
+      -
+        type : 23
+        enabled : false
+      -
+        type : 25
+        enabled : false
+      -
+        code : |1+
+         SI ZR_Contact..Occurrence>0 ALORS
+         	// On mémorise le contact courant
+         	gclTableContact.p_ContactCourant = ZR_Contact
+         	
+         	
+         	// Édition
+         	// Variables locales
+         	pclContactAModifier est un CPresentationFicheContact dynamique
+         	
+         	SI ZoneRépétéeSelect(ZR_Contact)<=0 ALORS RETOUR
+         	
+         	// On lit le contact actuel
+         	pclContactAModifier = gclTableContact.DemandeModifieFicheContact()
+         	
+         	// On vérifie que l'on a un contact en cours
+         	SI pclContactAModifier = Null ALORS RETOUR
+         	
+         	// Ouverture de la fenêtre fiche
+         	OuvreFenêtreMobile(FEN_FicheContact,pclContactAModifier)
+         	
+         FIN
+         
+        type : 33
+      -
+        type : 230
+        enabled : false
+      -
+        type : 241
+        enabled : false
+      -
+        type : 222
+        enabled : false
+      -
+        type : 223
+        enabled : false
+      -
+        code : |1+
+         // Suppression
+         nIndice est un entier = ZoneRépétéeCherche(ATT_ID,ZR_Contact.ATT_ID)
+         SI nIndice <=0 ALORS RETOUR
+         
+         // Affecte l'élément courant 
+         gclTableContact.p_ContactCourant = gclTableContact.p_tabContacts[nIndice]
+         
+         // On effectue la demande de confirmation dans la vue
+         SI OuiNon(Non,ChaîneConstruit("Confirmez-vous la suppression de %1 ?",gclTableContact.p_ContactCourant.p_Prénom + " " + gclTableContact.p_ContactCourant.p_Nom)) = Non ALORS 
+         	RETOUR
+         FIN
+         
+         // Suppression effective
+         gclTableContact.SupprimeContactCourant()
+         ZR_Contact.Supprime(nIndice)
+         
+         SI ErreurDétectée ALORS Erreur()
+         
+        type : 224
+  -
+    name : BTN_Ajouter
+    identifier : 0x2fd3495e05e36d03
+    internal_properties : CAAAAAgAAADDiCEZG6eTQK1MofE8xO7NhxDxMGq+4SP8jOi5X5rn6APOU7FxKBn5iZWzjxab/rCWVOhfh8qRGKHRNQ/baDdy16poJp7+kk3ydKSqGlfJ9VPy82l8QTswpWG3Xeoq6EeNbVGaH3WagKc4Z2vr8W57x8vOveoVLmd+uEzVkjUZEETVjzb13F12+Za/usL2UxD4KBnq5vCf1FCR75dD6CMGK9+hiAcCHv0R5EyUz+EkTBMpNgCKWwf1xx+vT3S8osWQRm2JlE+SKOhhNQ/eJo84fM1/5lZDv14xr3xb/2sBFqw7FEO5s1HADj1CCwe24KlSw286PCD9Q53pCqlD4ABeWoN7oprkEpqE0CA8uPJ6vMUq1gX+ZQVeCqT2b6OosubWdrnx3U7Nz1qgkoEf/pl85gRJ2/17lvjkR2l8Y6yFeCsklG1sT45qpU8k8MadlEoI49cd0UfwinhaC/8AehodPi5bTRNvniQn4ynxUsliGMnzn69i6tQjZfosWdw1OpmFpcx2/TwzQnBLhIsFGvwJsqsFaYCVIPA9o4DoqPJ83bEBhK4V8tkwo+2QmyM1BKspEr2Hl9V3inyUa81GrTVQ9y5BXqEndzpdQb0WbaSZdjff+4Ag3wUKmVzFTqMmcXTFNtTlbGNEpjWDSaBDyE/S8jUL5LedwJtj/mBGSBjIojm84Yj3VYjg2g4FmqxM59oT12SCPfVFpYdhhdGeuuzwWdQAwmvCxvjZSmSy5zagSBRocuYl0OehqVSwktL+e1IaRpnw1/swmXr8OC9iRPt93MLnl5xtalaqYxNgxUdjN55YjGwKlEBJZC24IxWDRlqQVFOJ2OkfWZ5aGaXkPvb50+N68ehVzhL6QIXGfDEgnZGBH+4vCU77CevI4Y9/SnY37XInnxduQpV26PPosNNpvZ4NWQuZ7Hlj
+    properties :
+     x : 237
+     y : 419
+     width : 60
+     height : 60
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // On crée un nouveau contact potentiel
+         gpclLeNouveauContact = gclTableContact.DemandeNouveauFicheContact()
+         
+         // Ouverture de la fenêtre fiche
+         OuvreFenêtreMobile(FEN_FicheContact,gpclLeNouveauContact, vrai)
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+ actionbar :
+  name : ACTB_ActionBar
+  identifier : 0x2fd333ca2b812515
+  internal_properties : CAAAAAgAAABk703eYSUOvStBSwXeY79N6EpSujn1prJwS9L9b3h9TsJGZsJ26obrT7NuOBaoz2HzbFcrJQz6oNfQO/49yBI9u6MoXKR9CGtm4W1h8q0Due2BnK1c5EBKKYPG232mYHAUc0ZDE7J/gS7STgMw7W0fdKDTMsrYnOPHPLoPq/9eVpS2Z1vA344r5aTp318WpwBovNhbtfpfdBPivYrU2ZCG3zRdDAdMV1N9BnP1oMQURT2jFnYk5+gGTklxsMn6RqWhUYZJX0HtCn0HixVGdUnp7WnjPSiGfvjuDGVg08Q=
+  controls : []
+  code_elements :
+   type_code : 125
+   p_codes :
+    -
+      type : 229
+      enabled : false
+    -
+      type : 239
+      enabled : false
+    -
+      type : 240
+      enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x29f8144500a4e5ba
+  internal_properties : CAAAAAgAAAByVTsSr3/syDi1St8xf8fgHxdhV816G1q5zyODGkOm1npuSkYo5g/jXWoWFFK2H3oUBZtHLsT5rfRCnVFNNS0taWG501M84VhyiY2gqfWqbb5TaLNBc7/5X5PbRqVlZ5a3p7SznWjoHPbzt8FGrVw2pkxQ2AMTSCoEquPAoSRRZmCgf0llwPSIdkz+fkQsa3yCb/aARC1IuAmTNbEAkdknQHeBdhsRIWlMefD05RVbqvlMGzysSB4KUPZWTHHaQPB4ObHU/5KQ/VjN8jyQaoRgKuGxrJ5V23KTuMr/Zw==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABKff4sxysR+9kg8GIJ708iDvb5GJxqytSUKL54fomJ9xlu42EWUFv/+en+BSQDmdB2krqVslwL/1eyQDVw8sffQk7lF3aDfZNzV/+zROsnKAy1jaSejRR5UgML
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      PROCEDURE MaFenêtre()
+      
+      gclTableContact est un CPresentationTableContact(gclTousLesContacts) <présentation>
+      gpclLeNouveauContact est un CPresentationFicheContact dynamique
+   -
+     code : |1+
+      // On affiche une info au premier "go"
+      SI EnModeTestAutomatique() = Faux ALORS	
+      	info(<§$0000§>)
+      FIN
+     type : 34
+   -
+     code : |1+
+      TableAffiche(ZR_Contact,taCourantBandeau)
+     type : 234
+   -
+     code : |1+
+      si MaFenêtreFille..ValeurRenvoyée = Vrai ALORS
+      	
+      	// On a alloué un membre "nouveau" ? 
+      	si gpclLeNouveauContact = Null ALORS
+      		// On doit modifier le contact dans la liste des contacts
+      		gclTableContact.ModifierContact()
+      		
+      	sinon		
+      		// Il suffit de l'ajouter
+      		gclTableContact.AjouterContact(gpclLeNouveauContact)
+      		
+      		// Libère l'élément
+      		gpclLeNouveauContact = null
+      	FIN
+      FIN
+      
+      SI ErreurDétectée ALORS Erreur()
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+ code_parameters :
+  internal_properties : CAAAAAgAAAB6ragasMBWLfpsSyU19J6lAvYEqFWd1xYOjmHr1XHVZOVmechqLo1vKvfoAJhHeXL59P8BudVQfrBZ/U9vpjDz5RFibMKKm/84EA==
+  original_name : _11
+resources :
+ string_res :
+  identifier : 0x1fd333c801f71b13
+  internal_properties : CAAAAAgAAACyXVFaObH4lOGSEHJoZf1MD49w+XTw2LScZCP/urkWFwy+HYJdyQ3umA==
+  strings :
+   -
+     text :
+      fr-FR : "MVP est l'acronyme de MODELE - VUE - PRESENTATION.\r\n\r\nIl s'agit d'un \"Design Pattern\" qui privilégie un découpage de l'architecture des interfaces utilisateur en couches.\r\nCette architecture en couches de l'application et de l'IHM permet de rendre les projets plus faciles à maintenir et à faire évoluer.\r\n\r\nAttention : Ce mode de développement utilise la POO : il est vivement conseillé (voire obligatoire) de maîtriser les concepts de la POO. \r\n\r\nRetrouvez plus d'informations sur l'aide en ligne"
+     index : 0
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

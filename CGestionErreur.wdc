@@ -1,0 +1,123 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CGestionErreur
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1464ceb7009758d8
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      // Type d'erreurs
+      CodeErreur est une Enumération
+      	Aucune
+      	NonTrouvé
+      	ErreurHFSQL
+      FIN
+      
+      CGestionErreur est une Classe	
+      
+      	protege
+      		m_ECode	est une codeerreur		// Code d'erreur
+      		m_sTexte est une chaine		// Texte de l'erreur
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1469526663814011096
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()
+      
+      // Aucune erreur par défaut
+      m_ECode=aucune
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1469526663814076632
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : Init
+     procedure_id : 1469526663814142168
+     type_code : 12
+     code : |1-
+      PROCEDURE Init(eCodeErreur est un CodeErreur, sTexte est une chaine="")
+      
+      // Mémorisation de l'erreur
+      m_ECode=eCodeErreur
+      m_sTexte=sTexte
+      
+      // Si c'est une erreur HFSQL, on ajoute les informations associées
+      si eCodeErreur=ErreurHFSQL et sTexte="" alors
+      	m_sTexte=herreurinfo()
+      FIN
+     type : 458752
+   -
+     name : FormateMessage
+     procedure_id : 1469526663814207704
+     type_code : 12
+     code : |1-
+      PROCEDURE FormateMessage()
+      
+      // Variables locales
+      sMessage est une chaine
+      
+      // Gestion des cas simples
+      si m_ECode=Aucune alors renvoyer ""
+      si m_sTexte<>"" alors renvoyer m_sTexte
+      
+      // Gestion des codes gérés
+      selon m_ECode
+      	cas NonTrouvé:		sMessage=<§$0000§>
+      	cas ErreurHFSQL:		sMessage=<§$0001§>
+      	AUTRE CAS:
+      		// Pas de formatage spécifique
+      FIN
+      
+      // On renvoie le message
+      renvoyer sMessage
+     type : 458752
+  properties :
+   -
+     name : p_eCode
+     identifier : 0x1464ceb7009858d8
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_eCode() : CodeErreur
+         
+         // Renvoie le code d'erreur
+         renvoyer m_ECode
+        type : 1966080
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x143405b9005f7737
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      fr-FR : Enregistrement non trouvé dans la base de données.
+     index : 0
+   -
+     text :
+      fr-FR : Erreur détectée par la base de données.
+     index : 1
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

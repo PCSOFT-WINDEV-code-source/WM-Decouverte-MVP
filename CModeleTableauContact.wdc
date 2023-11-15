@@ -1,0 +1,193 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CModeleTableauContact
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1464d77b0047978e
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CModeleTableauContact est une Classe
+      	hérite de CModeleBase
+      	
+      	PRIVE
+      		m_tabContacts		est un tableau de CModeleContact dynamique		
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1469536301715330958
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      	// Appel du constructeur de l'objet hérité
+      	Constructeur CModeleBase(Contact..Nom,Contact.IDContact..Nom)
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1469536301715396494
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : Charger
+     procedure_id : 1469537238018419513
+     type_code : 12
+     code : |1-
+      PROCEDURE Charger()
+      
+      // Variables locales
+      
+      // Suppression de l'ancien contenu
+      TableauSupprimeTout(m_tabContacts)
+      
+      // Parcours de la liste des contacts
+      pour TOUT Contact 
+      	clNouveauContact est un CModeleContact
+      	
+      	// Récupération des rubriques
+      	clNouveauContact.Charger()
+      	
+      	// Ajout au tableau
+      	_AjouteTableau(clNouveauContact)
+      	
+      FIN
+      
+      // L'interface graphique devra être mise à jour
+      DemandeMiseAJourUI()
+     type : 458752
+   -
+     name : Ajouter
+     procedure_id : 1469863715668283005
+     type_code : 12
+     code : |1-
+      PROCEDURE Ajouter(pclNouveauContact est un CModeleContact dynamique)
+      
+      // Variables locales
+      clGestionErreur est un CGestionErreur
+      
+      // On enregistre le contact
+      SI pclNouveauContact.bEnregistrer(clGestionErreur) = Faux alors
+      	// L'ajout à échouer
+      	ErreurDéclenche(1,clGestionErreur.FormateMessage())
+      	RENVOYER Faux
+      FIN
+      
+      // On ajoute au tableau
+      _AjouteTableau(pclNouveauContact)
+      
+      // L'interface graphique devra être mise à jour
+      DemandeMiseAJourUI()
+      RENVOYER Vrai
+     type : 458752
+   -
+     name : _AjouteTableau
+     procedure_id : 1469864527417159857
+     type_code : 12
+     code : |1-
+      PROCEDURE PRIVÉE _AjouteTableau(pclNouveauContact est un CModeleContact dynamique)
+      
+      TableauAjoute(m_tabContacts,pclNouveauContact)
+     type : 458752
+   -
+     name : Modifier
+     procedure_id : 1469866455857597317
+     type_code : 12
+     code : |1-
+      PROCEDURE Modifier(clContactAModifier est un CModeleContact dynamique)
+      
+      // Variables locales
+      clGestionErreur 	est un CGestionErreur
+      nIndice			est un entier
+      
+      
+      // On recherche le contact
+      nIndice = TableauCherche(m_tabContacts,tcLinéaire,"Identifiant",clContactAModifier.m_vID)
+      SI nIndice=-1 ALORS
+      	clGestionErreur.Init(CGestionErreur.NonTrouvé)
+      	ErreurDéclenche(3,clGestionErreur.FormateMessage())
+      	RENVOYER Faux
+      FIN
+      
+      // On enregistre le contact
+      SI clContactAModifier.bEnregistrer(clGestionErreur) = Faux ALORS
+      	// La modification à échoué
+      	ErreurDéclenche(2,clGestionErreur.FormateMessage())
+      	RENVOYER Faux
+      FIN
+      
+      // On mets à jour dans le tableau
+      m_tabContacts[nIndice] = clContactAModifier
+      
+      // L'interface graphique devra être mise à jour
+      DemandeMiseAJourUI()
+      RENVOYER Vrai
+     type : 458752
+   -
+     name : Supprimer
+     procedure_id : 1469911501482791656
+     type_code : 12
+     code : |1-
+      PROCEDURE Supprimer(pclContactASupprimer est un CModeleContact dynamique)
+      
+      // Variables locales
+      clGestionErreur 	est un CGestionErreur
+      nIndice			est un entier
+      
+      // On recherche le contact
+      nIndice = TableauCherche(m_tabContacts,tcLinéaire,"Identifiant",pclContactASupprimer.m_vID)
+      SI nIndice=-1 ALORS
+      	clGestionErreur.Init(CGestionErreur.NonTrouvé)
+      	ErreurDéclenche(3,clGestionErreur.FormateMessage())
+      	RENVOYER Faux
+      FIN
+      
+      // On supprime le contact
+      SI pclContactASupprimer.bSupprimer(clGestionErreur) = Faux ALORS
+      	// La suppression à échoué
+      	ErreurDéclenche(2,clGestionErreur.FormateMessage())
+      	RENVOYER Faux
+      FIN
+      
+      // On supprime du tableau
+      TableauSupprime(m_tabContacts,nIndice)
+      
+      // L'interface graphique devra être mise à jour
+      DemandeMiseAJourUI()
+      RENVOYER Vrai
+     type : 458752
+  properties :
+   -
+     name : p_tabContacts
+     identifier : 0x1464d83f004a9424
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_tabContacts()
+         
+         RENVOYER m_tabContacts
+        type : 1966080
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1fd0a030002b0a46
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

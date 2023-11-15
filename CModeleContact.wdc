@@ -1,0 +1,240 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CModeleContact
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1464d3250012a84f
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAAAFthWvqMkqXrENZ1uHrl1ZV+1+hQ8YkGh6WyAz6LMwCmxucFVj9gSPABXto23CNvZyNlnkZlrKOPgYnVOiWRzEF5ixQMsdgDapvPN99OLWEwkiqsu8Eki7qzk9ieBTdSM3CEqBZm4gi/pmLGCO8CGW7rOIekY5YEraF6dxgSQ2W5jaAtoY0sxN
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CModeleContact est une Classe
+      	hérite de CModeleBase
+      	
+      	PRIVE
+      		Identifiant 	est un entier sur 8 octets 	<mapping = IDContact>
+      		Nom 			est une chaine 			<mapping = NomContact>
+      		Prénom 		est une chaine 			<mapping = PrénomContact>
+      		Email 		est une chaine 			<mapping = EmailContact>
+      		Photo 		est un buffer 			<mapping = PhotoContact>
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1469531534298163279
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      	// Appel du constructeur de l'objet hérité
+      	Constructeur CModeleBase(Contact..Nom,Contact.IDContact..Nom)
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1469531534298228815
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : _MémoriseIdentifiant
+     procedure_id : 1476132787373728897
+     type_code : 12
+     code : |1+
+      PROCEDURE PRIVÉE _MémoriseIdentifiant()
+      
+      Ancetre:_MémoriseIdentifiant()
+      
+      // On mémorise l'identifiant du contact
+      Identifiant = m_vID
+     type : 458752
+   -
+     name : bVérifieEmail
+     procedure_id : 1476221658834771852
+     type_code : 12
+     code : |1-
+      PROCEDURE privée bVérifieEmail(sEmail est une chaine)
+      
+      SI EmailVérifieAdresse(sEmail,emailValideSyntaxe)  <> emailAdresseValide ALORS	
+      	RENVOYER Faux
+      FIN
+      
+      RENVOYER Vrai
+     type : 458752
+  properties :
+   -
+     name : p_sGenereEtiquette
+     identifier : 0x1464d6c40042cca1
+     type_code : 103
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE PUBLIQUE p_sGenereEtiquette()
+         
+         // Variables locales
+         sEtiquette est une chaine
+         
+         // Génération de l'étiquette
+         sEtiquette = ChaîneConstruit("%1 %2"+RC+RC+"%3",Nom, Prénom, Email)
+         
+         // On renvoie l'étiquette générée
+         REnvoyer sEtiquette	
+        type : 1966080
+     template_refs : []
+   -
+     name : p_Identifiant
+     identifier : 0x1464ecf9005a8ca7
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Identifiant() : entier sur 8 octets
+         
+         RENVOYER Identifiant
+        type : 1966080
+     template_refs : []
+   -
+     name : p_Nom
+     identifier : 0x1464ed13005bf143
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Nom() : chaîne
+         
+         RENVOYER Nom
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Nom(Valeur est une chaîne)
+         
+         // Mémorisation du nom du contact
+         Nom=Valeur
+         
+         // On doit mettre à jour l'interface
+         DemandeMiseAJourUI()
+        type : 2031616
+     template_refs : []
+   -
+     name : p_Prénom
+     identifier : 0x1464ed21005c284a
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Prénom() : chaîne
+          
+         RENVOYER Prénom
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Prénom(Valeur est une chaîne)
+         
+         // Mémorisation du prénom du contact
+         Prénom=Valeur
+         
+         // On doit mettre à jour l'interface
+         DemandeMiseAJourUI()
+        type : 2031616
+     template_refs : []
+   -
+     name : p_Email
+     identifier : 0x1464ed37005d7e36
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Email() : chaîne
+         
+         RENVOYER Email
+        type : 1966080
+      -
+        internal_properties : CAAAAAgAAAA5aCBqCgeJE0cVdMHCNo2XZi/v8SE/l+Kfjxb9wzxutBAH2yxFEzfwNb+Bh4hSPmtcEmAAtbvgLTFQnTv5f8ECTZqdCP3uKWiIfPCpzQLmwSsnbQkyGcO2H6ZdEW2h9V0lAaSMi9zLRfJ/yvK7WpyJlttC2X2Ag16s0JchZmD53weXI2f8rXiAYL8ZFDqE/+ycYRlAKy16y6QGLe4HxJAcUWqpVu5/rd76KATMmoi3InXvM+OJIyIML65fzlJqBIRSjHsvNFWYDg0LBnfKaj+dsuP1WP3//PGzxXIHSt7j/WuosEcLDyIpbViaw1xHYhb3FWVfLJ/yeCrzN3OqzKl14+i0p0Go4jB0fme6xZ6K5A4wOA==
+        code : |1-
+         PROCEDURE PUBLIQUE p_Email(sAdresseEmail est une chaîne)
+         
+         // On vérifie que l'adresse email indiquée est valide
+         SI bVérifieEmail(sAdresseEmail) = Faux alors
+         	ErreurDéclenche(1,<§$0000§>)
+         	RETOUR
+         FIN
+         
+         // Mémorisation de l'email
+         Email=sAdresseEmail
+         
+         // On doit mettre à jour l'interface
+         DemandeMiseAJourUI()
+        type : 2031616
+     template_refs : []
+   -
+     name : p_Photo
+     identifier : 0x1464ed44005eb02e
+     type_code : 103
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAAb3cJZKXZudg9Mn1oET7DJg50MXChNoxuPcvOgCFXPDxFcLrhzEFEN2IND1Agm3X7XejoQIBQy5D49qN1QYC4EzbHUG1VcaDgEbsJ8hgLI2uupmLMKG1Zn4KjNJEexBzR19cexsku6gnRG57w=
+        code : |1-
+         PROCEDURE PUBLIQUE p_Photo() : buffer
+         
+         // Si la photo est vide on renvoie une image par défaut
+         SI Photo = "" alors
+         	bufPhotoDefaut est un buffer = fChargeBuffer(frepexe()+"\photo.png")
+         	renvoyer bufPhotoDefaut
+         FIN
+         
+         RENVOYER Photo
+        type : 1966080
+      -
+        internal_properties : CAAAAAgAAAAxEChsgJ/xa2ddlDnSLmWXbifP4bGvd3I3354d2xx+fPCX4+RNa28IpRcBryhqlltUqsDgdftAzanghSshn/H6LUq1IAWWsWAY1NChnfqesSN/PamyGbN2R6YV0bXhxYVVIdxk08STfbJnmhpronQZTlPCSb1gY45E8C9BbhBJVycnW/+UxXA4wIttsKbIMyigZQU0Jyl2t6giESpz+PR4ZW51ejrbyUp+xKgo9qz7XtlDn3dVHx6IQ4pTyl4eyNB2kEczIKEkapEHGkOWDoPpppdBrDmLuH3HsVbDxsK3Se98TPvHS16l0WSur3hbRoJr+UGz2CuOxD5vu/8GYB1hx9ywm02k3hxImntGUcJgzBY4MA==
+        code : |1+
+         PROCEDURE PUBLIQUE p_Photo(sNomFichier est une chaine)
+         
+         // Vérification de l'existence du fichier
+         Si fFichierExiste(sNomFichier) = faux ALORS
+         	ErreurDéclenche(2,"La photo n'est pas fournie")
+         	RETOUR
+         FIN
+         
+         // On charge le buffer
+         Photo = fChargeBuffer(sNomFichier)
+         
+         // On doit mettre à jour l'interface
+         DemandeMiseAJourUI()
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sNomComplet
+     identifier : 0x1465c674001814db
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNomComplet()
+         
+         RENVOYER Nom + [" "] +Prénom
+        type : 1966080
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1464d197009e9240
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      fr-FR : Adresse email non valide
+     index : 0
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

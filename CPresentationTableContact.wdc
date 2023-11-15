@@ -1,0 +1,141 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CPresentationTableContact
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1465d97d008471ab
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CPresentationTableContact est une Classe
+      
+      PROTÉGÉ
+      	m_clTableauContact 	est un CModeleTableauContact		<associé>		// modèle associé à cette présentation : toujours en phase avec l'interface
+      	
+      	m_clContactCourant		est un CModeleContact dynamique					// Contact actuellement sélectionné dans la table
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1469819984309219755
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur(pclTableauContact est un CModeleTableauContact dynamique)
+      
+      // Mémorisation du modèle d'origine
+      m_clTableauContact <- pclTableauContact
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1469819984309285291
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : DemandeNouveauFicheContact
+     procedure_id : 1469830897822938768
+     type_code : 12
+     code : |1-
+      PROCEDURE DemandeNouveauFicheContact()
+      
+      // Variables locales
+      clNouveauContact est un CModeleContact
+      clNouveauFicheContact est un CPresentationFicheContact(clNouveauContact)
+      
+      RENVOYER clNouveauFicheContact
+     type : 458752
+   -
+     name : SupprimeContactCourant
+     procedure_id : 1469863659833629439
+     type_code : 12
+     code : |1-
+      PROCEDURE SupprimeContactCourant()
+      
+      // On vérifie le contact courant
+      SI m_clContactCourant = null alors retour
+      
+      // On demande sa suppression
+      SI m_clTableauContact.Supprimer(m_clContactCourant) = Faux alors
+      	RETOUR
+      FIN
+      
+      // On demande la mise à jour de l'interface
+      DemandeMiseAJourUI()
+     type : 458752
+   -
+     name : DemandeModifieFicheContact
+     procedure_id : 1469904350345308726
+     type_code : 12
+     code : |1-
+      PROCEDURE DemandeModifieFicheContact()
+      
+      // Variables locales
+      clNouveauFicheContact est un CPresentationFicheContact(m_clContactCourant)
+      
+      RENVOYER clNouveauFicheContact
+     type : 458752
+   -
+     name : AjouterContact
+     procedure_id : 1469904616633343603
+     type_code : 12
+     code : |1-
+      PROCEDURE AjouterContact(clNouveauContact est un CPresentationFicheContact dynamique)
+      
+      SI Ajouter(clNouveauContact.p_clContactCourant) = Faux alors
+      	RETOUR
+      FIN
+      
+      // Il suffit de mettre à jour l'interface
+      DemandeMiseAJourUI()
+     type : 458752
+   -
+     name : ModifierContact
+     procedure_id : 1469909272393787061
+     type_code : 12
+     code : |1-
+      PROCEDURE ModifierContact()
+      
+      // Il suffit de mettre à jour l'interface
+      DemandeMiseAJourUI()
+     type : 458752
+  properties :
+   -
+     name : p_ContactCourant
+     identifier : 0x1466031400a6e6ae
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_ContactCourant() : CModeleContact
+         
+         RENVOYER m_clContactCourant
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_ContactCourant(Valeur est CModeleContact dynamique)
+         
+         m_clContactCourant=Valeur
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1fd0a03000470a75
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
